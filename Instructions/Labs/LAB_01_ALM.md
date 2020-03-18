@@ -260,22 +260,17 @@ solution to test/production.
     2.  Paste the script below in the **Script** text area. Replace
         **user\@myorg.onmicrosoft.com** with your user credentials.
 
-echo commit all changes
-
-git config user.email "user\@myorg.onmicrosoft.com"
-
-git config user.name "Automatic Build"
-
-git checkout master
-
-git add --all
-
-git commit -m "solution updates"
-
-echo push code to new repo
-
-git -c http.extraheader="AUTHORIZATION: bearer \$(System.AccessToken)" push
-origin master
+    ```
+    echo commit all changes
+    git config user.email "user\@myorg.onmicrosoft.com"
+    git config user.name "Automatic Build"
+    git checkout master
+    git add --all
+    git commit -m "solution updates"
+    echo push code to new repo
+    git -c http.extraheader="AUTHORIZATION: bearer \$(System.AccessToken)" push
+    origin master
+    ```
 
 1.  Add Solution Name variable.
 
