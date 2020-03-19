@@ -109,9 +109,11 @@ Known Issues
 -   You might receive warning messages about PSGallery – if you wish to suppress
     those messages you can use the following command to change your trust level
     on the gallery
-
+    
+    ```
     Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
-
+    ```
+    
 -   Some computers have restrictive policies for running unsigned scripts – you
     can adjust your execution policy using the information provided here if
     needed https:/go.microsoft.com/fwlink/?LinkID=135170
