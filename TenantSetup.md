@@ -1,9 +1,7 @@
 Setup MB600 student tenant
 ==========================
 
-The script provides a set of commands to automate creating users, assigning
-licenses and creating a trial environment with Common Data Service for each
-user.
+This document is intended to help setup a tenant provisioned from https://cdx.transform.microsoft.com/ to run the workshop.  The script provides a set of commands to automate creating users, assigning licenses and creating a trial environment with Common Data Service for each user.
 
 Do not use this on your production live tenants as it does delete users and
 environments. You will create a tenant at demos.microsoft.com and make sure to
@@ -13,31 +11,41 @@ This setup process is documented to use the Windows PowerShell ISE application.
 If you aren’t familiar with it you can find more information here
 <https://docs.microsoft.com/en-us/powershell/scripting/components/ise/introducing-the-windows-powershell-ise?view=powershell-6>
 
-Step 1 – Setup tenant
+Step 1 – Create a new Demo tenant
 ---------------------
 
-1.  **Open a new private browser session** and go to admin.microsoft.com. Login
+1. Sign up for a new demo at https://cdx.transform.microsoft.com/
+
+2. Select **My Environments -\> Create Tenant**
+
+3. Select **Type of Quick Tenant**
+
+4. Choose **Microsoft 365 Enterprise with Users and No Content.** Create the tenant.
+
+5. Make note of the admin user and password. You might have to wait a minute or two for the tenant to be provisioned first before they are available.
+
+6.  **Open a new private browser session** and go to admin.microsoft.com. Login
     with your tenant credentials.
 
-2.  Go to **Billing -\>Purchase Services** and Search on **Power Apps per User
+7.  Go to **Billing -\>Purchase Services** and Search on **Power Apps per User
     Plan** and click on it.
 
-3.  Click **Get free trial**.
+8.  Click **Get free trial**.
 
-4.  Click **Try now**.
+9.  Click **Try now**.
 
-5.  Click **Continue**.
+10.  Click **Continue**.
 
-6.  Now assign one of these licenses to your admin user, this will leave 24 that
+11.  Now assign one of these licenses to your admin user, this will leave 24 that
     you can use with the remaining script setup.
 
-7.  In the same browser sessions, navigate to aka.ms/ppac
+12.  In the same browser sessions, navigate to aka.ms/ppac
 
-8.  Select **Environments** and make sure you can see the default environment.
+13.  Select **Environments** and make sure you can see the default environment.
 
-9.  Click on the default environment it will take you to admin.powerapps.com
+14.  Click on the default environment it will take you to admin.powerapps.com
 
-10. Change the environment name to **Personal Productivity** and click **Save**.
+15. Change the environment name to **Personal Productivity** and click **Save**.
 
 Step 2 - Run Setup Script
 -------------------------
