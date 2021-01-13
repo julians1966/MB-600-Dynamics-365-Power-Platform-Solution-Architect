@@ -90,13 +90,9 @@ instructions to sign up.
 
 9.  Select **Repositories**.
 
-10. Search for **Project Collection Build Service** and select the one that
-    starts with **Project Collection.**
+10. Navigate to **Permissions** then select **Project Collection Build Service Accounts**
 
 11. Locate the **Contribute** and set it to **Allow**.
-
-12. Click **Show More** on the left bar to expand the menu and then continue
-    with the next exercise.
 
 **Exercise 2: Build Export Pipeline**
 -------------------------------------
@@ -125,7 +121,7 @@ solution to test/production.
 
     7.  Click **Save**.
 
-2.  Add PowerApps Tool Installer task.  
+2.  Add PowerApps Tool Installer task.  This is found under **Deprecated Tasks**
     **Note:** The PowerApps Tool Installer needs to be run before any other
     PowerApps build tasks.
 
@@ -134,7 +130,7 @@ solution to test/production.
     2.  Search for **PowerApps Tool** hover over select **PowerApps Tool
         Installer** and click **Add**.
 
-3.  Add PowerApps Export Solution task.
+3.  Add PowerApps Export Solution task.  This is found under **Deprecated Tasks**
 
     1.  Search for **Export.**
 
@@ -149,6 +145,11 @@ solution to test/production.
     1.  Start a new browser window or tab and log on to
         <https://admin.powerplatform.microsoft.com>. Use the same credentials
         that you are using in Azure DevOps to log in.
+        
+       **Note**: To make sure that the required solution exists, log on to
+        <https://make.powerapps.com/> and make sure you are in the **Device
+        Ordering Development** environment. Select **Solutions** from the left
+        menu and you should see the Device Ordering Development solution.
 
     2.  Select **Environments** and click to open the **Device Ordering
         Development** environment.
@@ -158,12 +159,7 @@ solution to test/production.
 
     4.  Close the **Power Platform Admin** browser window or tab.
 
-    5.  To make sure that the required solution exists, log on to
-        <https://make.powerapps.com/> and make sure you are in the **Device
-        Ordering Development** environment. Select **Solutions** from the left
-        menu and you should see the Device Ordering Development solution.
-
-    6.  Close the **Solutions** browser window.
+    5.  Close the **Solutions** browser window.
 
 6.  Create a **Generic Service Connection.** Service Connections are how the
     build tasks know what environment URL and user credentials to use to access
@@ -272,29 +268,29 @@ solution to test/production.
     origin master
     ```
 
-1.  Add Solution Name variable.
+13.  Add Solution Name variable.
 
-    1.  Select the Variables tab.
+   1.  Select the Variables tab.
 
-    2.  Click **+ Add.**
+   2.  Click **+ Add.**
 
-    3.  Enter **SolutionName** for **Name** and **ContosoDeviceOrderManagement**
+   3.  Enter **SolutionName** for **Name** and **ContosoDeviceOrderManagement**
         for **Value**. Ensure that there are no white spaces while entering the
         above values.
+        
+   4.  Click **Save and Queue** and select **Save**.
 
-    4.  Click **Save and Queue** and select **Save**.
+   5.  Click **Save** again.
 
-    5.  Click **Save** again.
+14.  Allow Contribute for Build Service.
 
-2.  Allow Contribute for Build Service.
+   1.  Click **Project Settings**.
 
-    1.  Click **Project Settings**.
+   2.  Select **Repositories**.
 
-    2.  Select **Repositories**.
+   3.  Select **Device Management**.
 
-    3.  Select **Device Management**.
-
-    4.  Locate **Contribute** and set it to **Allow**.
+   4.  Locate **Contribute** and set it to **Allow**.
 
 **Exercise 3: Test the Pipeline**
 ---------------------------------
